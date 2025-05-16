@@ -7,7 +7,8 @@ import { defineConfig, devices } from '@playwright/test';
 const config = ({
   testDir: './tests',
 
-  timeout: 30 * 1000,
+  /* Max time a test can run for */
+  timeout: 30*1000,
   expect: {
     timeout: 5000
   },
@@ -15,8 +16,8 @@ const config = ({
   reporter: 'html',
 
   use: {
-    browserName : 'chromium'
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    browserName : 'chromium',
+    headless : false
   },
 });
 
