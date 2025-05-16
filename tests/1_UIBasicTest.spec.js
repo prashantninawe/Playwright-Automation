@@ -28,4 +28,5 @@ test.only('Browser Context Playwright test', async ({browser})=>
     const errorBlock = await page.locator("[style*='block']");
     console.log("Error message: " + await errorBlock.textContent());
     await expect(errorBlock).toContainText("Incorrect username/password.");
+    
 });
