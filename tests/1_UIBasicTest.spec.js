@@ -1,10 +1,21 @@
 // import { test, expect } from '@playwright/test'
 const {test} = require('@playwright/test')
 
-test('First Playwright test', async ()=>
+test('Page Playwright test', async ({page})=>
 {
 // playwright code goes here
-// step 1: Open the browser
-// step 2: Open the URL
-// step 3: Click on the button
+
+    await page.goto("https://google.com/");
+    
+});
+
+test.only('Browser Context Playwright test', async ({browser})=>
+{
+// playwright code goes here
+
+    // chrome - plugins/cookies
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+    
 });
