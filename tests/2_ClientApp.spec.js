@@ -1,7 +1,7 @@
 // import { test, expect } from '@playwright/test'
 const {test, expect} = require('@playwright/test')
 
-test.only('Browser Context Playwright test', async ({page})=>
+test('Browser Context Playwright test', async ({page})=>
 {
 // playwright code goes here
 
