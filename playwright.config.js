@@ -17,7 +17,14 @@ const config = ({
 
   use: {
     browserName : 'chromium',
-    headless : true
+    headless : true,
+    viewport: { width: 1920, height: 1080 },
+    launchOptions: {
+      args: ['--start-maximized']
+    },
+    screenshot : 'on',
+    trace : 'retain-on-failure'
+
   },
 });
 
